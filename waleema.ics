@@ -1,0 +1,35 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Danish and Aiman//Waleema invite//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:waleema-danish-aiman-20261020@invite
+DTSTAMP:20261012T000000Z
+DTSTART:20261020T133000Z
+DTEND:20261020T173000Z
+SUMMARY:Dawat-e-Waleema of Danish & Aiman
+LOCATION:Diamond Hall\, Khadi Machine Road\, near St. Mary's School\, Teta
+ vli\, Kausa\, Mumbra\, Thane 400612
+GEO:19.1716376;73.0226067
+DESCRIPTION:With the blessings of Allah\, you are invited to the Dawat-e-W
+ aleema of Danish and Aiman.\n\nDirections: https://www.google.com/maps/di
+ r/?api=1&destination=Diamond%20Banquet%20Hall%2C%20Khadi%20Machine%20Rd%2
+ C%20Kausa%2C%20Mumbra&destination_place_id=ChIJ1Y2PqxW_5zsReFNn3U_FFv8
+URL:https://www.google.com/maps/dir/?api=1&destination=Diamond%20Banquet%2
+ 0Hall%2C%20Khadi%20Machine%20Rd%2C%20Kausa%2C%20Mumbra&destination_place_
+ id=ChIJ1Y2PqxW_5zsReFNn3U_FFv8
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Dawat-e-Waleema of Danish & Aiman at 7:00 PM\, Diamo
+ nd Hall
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 2 hours: Dawat-e-Waleema of Danish & Aiman at 7:00 PM\, Dia
+ mond Hall
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
