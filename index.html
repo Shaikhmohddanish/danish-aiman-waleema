@@ -1180,9 +1180,11 @@ window.INVITE = {"start": "2026-10-20T19:00:00+05:30", "end": "2026-10-20T23:00:
       var body = new URLSearchParams();
       Object.keys(d).forEach(function(k){ body.append(k, d[k]); });
       fetch(CFG.sheet, { method: "POST", body: body, signal: ctrl ? ctrl.signal : undefined })
-        .then(function(r){ return r.json(); })
-        .then(function(res){
-          if (!res || res.result !== "ok") throw new Error("not saved");
+        .then(function(r){ if (!r.ok) throw new Error("not saved"); return r.text(); })
+        .then(function(t){
+          // sheet scripts answer {"result":"ok"} or {"result":"success","row":n}; only a reported error means it was not saved
+          var res = null; try { res = JSON.parse(t); } catch (x) {}
+          if (res && /error|fail/i.test(String(res.result || res.status || ""))) throw new Error("not saved");
           try { localStorage.setItem(KEY, JSON.stringify(d)); } catch (x) {}
           say(""); showDone(d); playChime();
         })
